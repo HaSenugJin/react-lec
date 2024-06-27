@@ -1,15 +1,14 @@
 import './App.css';
-
-let num = 10;
+import Header from './components/Header';
 
 function App() {
-  return <div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>num</div>
-  </div>;
+  return (
+  <div>
+    <Header />
+    <h1>hello</h1>
+    <div className='box'>box</div>
+  </div>
+  );
 }
 
 export default App;
