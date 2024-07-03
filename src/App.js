@@ -1,13 +1,26 @@
-import './App.css';
-import Header from './components/Header';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Nav from "./components/Nav";
+import About from "./page/About";
+import Home from "./page/Home";
+import Info from "./page/Info";
+import List from "./page/List";
+import Login from "./page/Login";
+import LoginComplete from "./page/LoginComplete";
 
 function App() {
   return (
-  <div>
-    <Header />
-    <h1>hello</h1>
-    <div className='box'>box</div>
-  </div>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/info/:id" element={<Info />} />
+        <Route path="/list" element={<List />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/loginComplete" element={<LoginComplete />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
